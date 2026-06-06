@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from db_config import loans_col, students_col, books_col
 
-def get_overdue_loans(days_allowed=14):
+def get_overdue_loans(days_allowed=20):
     """Lấy danh sách quá hạn dùng $lookup"""
     overdue_date = datetime.now() - timedelta(days=days_allowed)
     pipeline = [
